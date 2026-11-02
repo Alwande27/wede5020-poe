@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <title>Contact Us | Premium Mobile Carwash</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            Premium <span>Mobile</span> Carwash
+        </div>
+
+        <nav>
+            <a href="Premium mobile Carwash.html">Home</a>
+            <a href="Service.html">Services</a>
+            <a href="About.html">About</a>
+            <a href="Contacts.html" class="active">Contact</a>
+            <a href="Gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Get In Touch</h1>
+        <p>Book your next wash or ask us anything — we usually reply within a few hours.</p>
+    </section>
+
+    <section class="contact-wrapper">
+
+        <div class="contact-info">
+            <h2>Contact <span>Details</span></h2>
+            <div class="underline"></div>
+            <p><strong>Phone:</strong> 064 682 4646</p>
+            <p><strong>Email:</strong> exclusive@premiummobilecarwash.co.za</p>
+            <p><strong>Service Area:</strong> Dundee &amp; surrounds</p>
+            <p><strong>Hours:</strong> Mon – Sat, 8am – 5pm</p>
+
+            <div id="map" role="region" aria-label="Map of our Dundee service area"></div>
+        </div>
+
+        <div class="booking-form">
+            <h2>Book a <span>Wash</span></h2>
+            <div class="underline"></div>
+
+            <form id="booking-form" method="POST" novalidate>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" maxlength="60">
+                <span class="error" id="name-error"></span>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" maxlength="100">
+                <span class="error" id="email-error"></span>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" maxlength="16" placeholder="082 123 4567">
+                <span class="error" id="phone-error"></span>
+
+                <label for="service">Service</label>
+                <select id="service" name="service">
+                    <option value="">-- Select a service --</option>
+                    <option value="interior">Interior Cleaning (R100)</option>
+                    <option value="exterior">Exterior Washing (R100)</option>
+                    <option value="full">Full Detailing (R220)</option>
+                    <option value="engine">Engine Bay Wash (R280)</option>
+                </select>
+                <span class="error" id="service-error"></span>
+
+                <label for="calendar">Preferred Date</label>
+                <input type="date" id="calendar" name="calendar">
+                <span class="error" id="calendar-error"></span>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+                <span class="error" id="message-error"></span>
+
+                <input type="submit" value="Book Now">
+                <p id="form-status" class="form-status"></p>
+            </form>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Premium Mobile Carwash. All rights reserved. <span>Book today.</span></p>
+    </footer>
+    <a href="https://wa.me/27646824646?text=Hi%20Premium%20Mobile%20Carwash%2C%20I%20would%20like%20to%20book%20a%20wash."
+       class="whatsapp-btn" target="_blank" rel="noopener noreferrer"
+       aria-label="Chat with us on WhatsApp">
+        <span aria-hidden="true">💬</span> Chat on WhatsApp
+    </a>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="main.js" defer></script>
+
+</body>
+</html>
